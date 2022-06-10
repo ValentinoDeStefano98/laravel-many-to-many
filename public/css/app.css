@@ -9282,3 +9282,8 @@ html {
   height: 100px;
   overflow-y: hidden;
 }
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
