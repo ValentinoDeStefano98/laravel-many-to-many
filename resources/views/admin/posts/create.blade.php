@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{route('admin.posts.store')}}" method="POST">
+        <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
                 <div class="form-group">
                     <label for="title"><h3>Titolo</h3></label>
@@ -22,9 +22,14 @@
                     <textarea name="content" id="content" cols="30" rows="10" placeholder="Contenuto del post"></textarea>
                 </div>
 
-                <div class="form-group d-flex flex-column">
+                <!-- <div class="form-group d-flex flex-column">
                     <label for="image"><h3>Immagine</h3></label>
                     <textarea name="image" id="image" placeholder="Immagine del post"></textarea>
+                </div> -->
+
+                <div class="form-group d-flex flex-column">
+                    <label for="image"><h3>Immagine</h3></label>
+                    <input type="file" class="form-control-file" name="image" id="image" placeholder="Immagine del post">
                 </div>
 
                 <div class="pb-3 d-flex flex-column">

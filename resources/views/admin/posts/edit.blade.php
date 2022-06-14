@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{route('admin.posts.update', $post->id)}}" method="POST">
+        <form action="{{route('admin.posts.update', $post->id)}}" method="POST" enctype="multipart/form-data">
             @method('PUT')
             @csrf
                 <div class="form-group">
@@ -25,9 +25,14 @@
                     </textarea>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="image"><h3>Immagine</h3></label>
                     <input type="url" class="form-control" name="image" id="image" placeholder="Immagine del post" value="{{old('image', $post->image)}}"></input>
+                </div> -->
+
+                <div class="form-group d-flex flex-column">
+                    <label for="image"><h3>Immagine</h3></label>
+                    <input type="file" class="form-control-file" name="image" id="image" placeholder="Immagine del post">
                 </div>
 
                 <div class="pb-3 d-flex flex-column">
