@@ -1,6 +1,11 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
+    <div>
+        <Header/>
+        <main>
+            <div class="container">
+                <PostsList/>
+            </div>
+            <!-- <div class="row justify-content-center">
             <div class="col-md-8">
                 <div>
                     <Header/>
@@ -9,16 +14,23 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        </main>
     </div>
+
+
 </template>
 
 <script>
+
 import Header from './Header.vue'
+import PostsList from './posts/PostsList.vue'
+
 export default{
     name: "App",
     components: {
-        Header
+        Header,
+        PostsList
     }
 }   
 </script>

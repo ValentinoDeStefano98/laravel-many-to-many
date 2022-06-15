@@ -67,7 +67,7 @@
     </head>
     <body>
         <div class="position-ref full-height">
-            @if (Route::has('login'))
+            <!-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -80,7 +80,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif -->
 
             <div class="content">
                <!-- Pagina in costruzione -->
@@ -91,5 +91,7 @@
         </div>
         <!-- Richiamare javascript con dentro vue -->
         <script src="{{asset('js/front.js')}}"></script>
+        <!-- Javascript compilato da webpack di bootstrap -->
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
