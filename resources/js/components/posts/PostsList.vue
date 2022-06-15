@@ -1,12 +1,22 @@
 <template>
     <div>
         <!-- loader -->
-        <Loader v-if="isLoading"/>
-        <ul v-if="posts.length">
-            <li v-for="post in posts" :key="post.id">
-                {{post.title}}
-            </li>
-        </ul>
+        <Loader v-if="isLoading" />
+        <div v-if="posts.length">
+            <div class="card text-center" v-for="post in posts" :key="post.id">
+                <div class="card-header">
+                    {{post.title}}
+                </div>
+                <div class="card-body">
+                    <p class="card-title">
+                        <span v-for="tag in post.tags" :key="tag.id" class="badge" :style="`background-color:${tag.color}`">{{tag.label}}</span>
+                    </p>
+                    <p class="card-text">
+                        {{post.content}}
+                    </p>
+                </div>
+            </div>
+        </div>
         <p v-else>Non ci sono articoli</p>
     </div>
 </template>

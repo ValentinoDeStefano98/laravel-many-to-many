@@ -1,3 +1,4 @@
+// trunk-ignore(prettier)
 window.Vue = require('vue');
 window.axios = require('axios');
 

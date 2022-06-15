@@ -2621,6 +2621,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5852,11 +5862,48 @@ var render = function () {
       _vm._v(" "),
       _vm.posts.length
         ? _c(
-            "ul",
+            "div",
             _vm._l(_vm.posts, function (post) {
-              return _c("li", { key: post.id }, [
-                _vm._v("\n            " + _vm._s(post.title) + "\n        "),
-              ])
+              return _c(
+                "div",
+                { key: post.id, staticClass: "card text-center" },
+                [
+                  _c("div", { staticClass: "card-header" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(post.title) +
+                        "\n            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "p",
+                      { staticClass: "card-title" },
+                      _vm._l(post.tags, function (tag) {
+                        return _c(
+                          "span",
+                          {
+                            key: tag.id,
+                            staticClass: "badge",
+                            style: "background-color:" + tag.color,
+                          },
+                          [_vm._v(_vm._s(tag.label))]
+                        )
+                      }),
+                      0
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(post.content) +
+                          "\n                "
+                      ),
+                    ]),
+                  ]),
+                ]
+              )
             }),
             0
           )
@@ -18124,6 +18171,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
+// trunk-ignore(prettier)
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
